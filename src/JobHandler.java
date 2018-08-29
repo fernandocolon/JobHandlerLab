@@ -83,7 +83,9 @@ public class JobHandler {
 				eRank = eRank+10;		
 			else if(seniority == 3)
 				eRank = eRank+20;
-			else{}
+			else if (jobType){
+				return qualify;
+			}
 		}
 		//Add Code Here [You have to use Switch and If/Else to get graded]
 		
