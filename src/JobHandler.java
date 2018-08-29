@@ -64,7 +64,15 @@ public class JobHandler {
 	 * 		b) If the user has a seniority of 2, the user gains a 10 rank bonus
 	 * 		c) If the user has a seniority of 3, the user gains a 20 rank bonus
 	 * 		b) Otherwise there is no bonus.
-	 * 4. If the employee doesn't meet requirement 3, if the position is temporal 
+	 * 4. If the employee doesn't meet requirement 3, if if(eRank >= jobRank){
+	if(seniority ==1)
+	eRank=eRank + 5; // eRank += 5; 
+	else if(seniority == 2)
+		eRank = eRank+10;		
+	else
+		eRank = eRank+20;
+
+}the position is temporal 
 	 *    they can still qualify for the position.
 	 * @param job
 	 * @param person
@@ -74,7 +82,15 @@ public class JobHandler {
 		boolean qualify = false;
 		if(!availability){ return qualify;}
 		if(eRank <= 0) { return qualify;}
-		
+		if(eRank >= jobRank){
+			if(seniority ==1)
+			eRank=eRank + 5; // eRank += 5; 
+			else if(seniority == 2)
+				eRank = eRank+10;		
+			else if(seniority == 3)
+				eRank = eRank+20;
+			else{}
+		}
 		//Add Code Here [You have to use Switch and If/Else to get graded]
 		
 		return qualify; 
